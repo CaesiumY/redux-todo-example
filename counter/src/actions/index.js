@@ -3,7 +3,7 @@ const INCREASE = {
 };
 
 const DECREASE = {
-  type: "INCREASE"
+  type: "DECREASE"
 };
 
 export const increase = () => INCREASE;
