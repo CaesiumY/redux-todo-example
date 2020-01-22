@@ -1,32 +1,34 @@
-import React, { Component } from "react";
-
-export default class AddTodo extends Component {
-  constructor(props) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
-  }
-
-  componentDidMount() {
-    this.inputTodo = document.getElementById("inputTodo");
-  }
-
-  onClick(e) {
-    e.preventDefault();
-    const { addTodo } = this.props;
-    addTodo(this.inputTodo.value);
-    this.inputTodo.value = "";
-  }
-
-  render() {
-    return (
-      <div>
-        <form action="" id="addTodo">
-          <input type="text" placeholder="Enter todo" id="inputTodo" />
-          <button type="submit" onClick={this.onClick}>
-            ADD
-          </button>
-        </form>
-      </div>
-    );
-  }
+import React from "react";
+import { connect } from "react-redux";
+import { addTodo } from "../actions";
+function AddTodo({ dispatch }) {
+  let input;
+  return (
+    <div>
+      <form
+        action=""
+        id="addTodo"
+        onSubmit={e => {
+          e.preventDefault();
+          dispatch(addTodo(input.value));
+          input.value = "";
+        }}
+      >
+        <input
+          className="form-control"
+          type="text"
+          placeholder="Enter todo"
+          id="inputTodo"
+          ref={node => {
+            input = node;
+          }}
+        />
+        <button className="btn btn-primary" type="submit">
+          ADD
+        </button>
+      </form>
+    </div>
+  );
 }
+
+export default connect()(AddTodo);
