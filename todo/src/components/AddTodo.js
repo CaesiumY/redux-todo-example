@@ -11,9 +11,13 @@ function AddTodo({ dispatch }) {
         action=""
         id="addTodo"
         onSubmit={e => {
-          e.preventDefault();
-          dispatch(addTodo(input.value));
-          input.value = "";
+          if (input.value) {
+            e.preventDefault();
+            dispatch(addTodo(input.value));
+            input.value = "";
+          } else {
+            alert("값을 넣어주세요.");
+          }
         }}
       >
         <input
