@@ -9,8 +9,8 @@
 
 .col-sm.complete,
 .col-sm.delete {
+  display: block;
   width: auto;
   padding: 0 5px;
   float: right;
-  display: inline-block;
 }
