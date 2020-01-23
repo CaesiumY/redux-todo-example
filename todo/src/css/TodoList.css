@@ -1,0 +1,16 @@
+.col-sm {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.col-sm.text {
+  width: 60%;
+}
+
+.col-sm.complete,
+.col-sm.delete {
+  width: auto;
+  padding: 0 5px;
+  float: right;
+  display: inline-block;
+}

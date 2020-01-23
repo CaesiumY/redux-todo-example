@@ -8,3 +8,8 @@ input#inputTodo {
   margin: 20px;
   display: inline-block;
 }
+
+button.btn {
+  position: relative;
+  top: -3px;
+}
