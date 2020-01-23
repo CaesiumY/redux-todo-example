@@ -1,0 +1,10 @@
+form#addTodo {
+  text-align: center;
+  vertical-align: middle;
+}
+
+input#inputTodo {
+  width: 50%;
+  margin: 20px;
+  display: inline-block;
+}
