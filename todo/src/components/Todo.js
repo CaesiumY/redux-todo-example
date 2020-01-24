@@ -16,7 +16,9 @@ export default function Todo({
         data-item={index}
         style={{ lineHeight: 3 }}
       >
-        <div className={`col-sm text ${completeStatus}`}>{text}</div>
+        <div className={`col-sm text ${isComplete ? "font-italic" : ""}`}>
+          {text}
+        </div>
         <div className="col-sm complete">
           <button
             className={`btn btn-outline-${completeStatus}`}
