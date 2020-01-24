@@ -4,12 +4,22 @@ import PropTypes from "prop-types";
 import Todo from "./Todo";
 import "../css/TodoList.css";
 
-function TodoList({ todos }) {
+function TodoList({ todos, onTodoComplete, onTodoDelete }) {
   return (
     <div>
       <ul className="list-group container">
         {todos.map((todo, index) => (
-          <Todo key={index} {...todo} />
+          <Todo
+            key={index}
+            {...todo}
+            onComplete={() => {
+              onTodoComplete(index);
+            }}
+            onDelete={() => {
+              onTodoDelete(index);
+            }}
+            index={index}
+          />
         ))}
       </ul>
     </div>
