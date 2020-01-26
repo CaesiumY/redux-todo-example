@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../css/Filter.css";
 
 export const filterTypes = {
   ALL: "ALL",
@@ -17,9 +18,9 @@ const Filter = ({ filter, onFilterChange }) => {
         onClick={() => {
           onFilterChange(filterTypes[key]);
         }}
-        className={`nav-item ${filterTypes[key]} ${active}`}
+        className={`${active} nav-item ${filterTypes[key]}`}
       >
-        <a className="nav-link">{filterTypes[key]}</a>
+        <span className="nav-link">{filterTypes[key]}</span>
       </li>
     );
   });

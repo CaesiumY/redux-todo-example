@@ -1,0 +1,16 @@
+.nav {
+  width: 400px;
+  margin: auto;
+}
+
+.nav li {
+  color: #007bff;
+}
+
+.active {
+  color: #6c757d !important;
+}
+
+.nav li:hover {
+  cursor: pointer;
+}
