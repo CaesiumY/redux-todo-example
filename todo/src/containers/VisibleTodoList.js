@@ -9,11 +9,13 @@ const getVisibleTodos = (todos, filter) => {
       return todos;
     case filterTypes.COMPLETED:
       return todos.filter(todo => {
+        console.log(todo);
         return todo.isComplete === true;
       });
     case filterTypes.NOT_COMPLETED:
       return todos.filter(todo => {
-        return todo.isComplete === false;
+        console.log(todo.isComplete);
+        return todo.isComplete === false || todo.isComplete === undefined;
       });
     default:
       return todos;

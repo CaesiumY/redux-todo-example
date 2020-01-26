@@ -19,9 +19,7 @@ const Filter = ({ filter, onFilterChange }) => {
         }}
         className={`nav-item ${filterTypes[key]} ${active}`}
       >
-        <a href="" className="nav-link">
-          {filterTypes[key]}
-        </a>
+        <a className="nav-link">{filterTypes[key]}</a>
       </li>
     );
   });
