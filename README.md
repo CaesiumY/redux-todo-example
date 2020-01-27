@@ -15,6 +15,8 @@
 
 <details>
 <summary>3. Todo</summary>
-<img src="./screenshots/react_todo.png" width=500px>
+<img src="./screenshots/react_todo.png" width=800px>
+
 [모바일 링크](https://github.com/CaesiumY/redux-todo-example/blob/master/screenshots/react_todo_mobile.png)
+
 </details>
