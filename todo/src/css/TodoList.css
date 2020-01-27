@@ -18,3 +18,7 @@
 .col-sm.text.success {
   text-decoration: line-through;
 }
+
+.center {
+  margin: 10px;
+}

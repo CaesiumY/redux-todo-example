@@ -7,7 +7,7 @@ import "../css/TodoList.css";
 function TodoList({ todos, onTodoComplete, onTodoDelete }) {
   return (
     <div>
-      <ul className="list-group container">
+      <ul className="list-group center">
         {todos.map((todo, index) => (
           <Todo
             key={index}

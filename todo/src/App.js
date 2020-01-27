@@ -9,7 +9,7 @@ function App() {
   return (
     <HashRouter>
       <Route>
-        <div className="App">
+        <div className="App container">
           <AddTodo />
           <FilterContainer />
           <VisibleTodoList />
