@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../css/Filter.css";
 
 export const filterTypes = {
