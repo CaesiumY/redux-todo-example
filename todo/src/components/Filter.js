@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Route, Link } from "react-router-dom";
 import "../css/Filter.css";
 
 export const filterTypes = {
@@ -20,7 +21,9 @@ const Filter = ({ filter, onFilterChange }) => {
         }}
         className={`${active} nav-item ${filterTypes[key]}`}
       >
-        <span className="nav-link">{filterTypes[key]}</span>
+        <Link to={key === filterTypes.ALL ? "" : key} className="nav-link">
+          {filterTypes[key]}
+        </Link>
       </li>
     );
   });
